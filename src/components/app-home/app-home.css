@@ -1,5 +1,10 @@
 .app-home {
-  padding: 10px;
+
+}
+
+.map-container {
+  width: 100%;
+  height: 50vh;
 }
 
 button {

@@ -7,22 +7,32 @@ import { Component } from '@stencil/core';
 })
 export class AppHome {
 
+  private mapComponent;
+
+  componentDidLoad(){
+    this.mapComponent = document.querySelector('my-google-maps');
+  }
+
+  testMarker(){
+
+    let center = this.mapComponent.getCenter();
+    this.mapComponent.addMarker(center.lat(), center.lng());
+
+  }
+
   render() {
     return (
       <div class='app-home'>
-        <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-        </p>
+        <div class='map-container'>
+          <my-google-maps apiKey="YOUR_API_KEY"></my-google-maps>
+        </div>
 
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            Profile page
-          </button>
-        </stencil-route-link>
+        <button onClick={() => this.testMarker()}>
+          Add Marker
+        </button>
+
       </div>
     );
   }
+
 }

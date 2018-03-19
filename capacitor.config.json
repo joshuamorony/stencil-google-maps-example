@@ -1,0 +1,6 @@
+{
+  "appId": "com.joshmorony.stencilmaps",
+  "appName": "StencilGoogleMaps",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

@@ -106,4 +106,34 @@ declare global {
   }
 }
 
+
+import {
+  MyGoogleMaps as MyGoogleMaps
+} from './components/my-google-maps/my-google-maps';
+
+declare global {
+  interface HTMLMyGoogleMapsElement extends MyGoogleMaps, HTMLStencilElement {
+  }
+  var HTMLMyGoogleMapsElement: {
+    prototype: HTMLMyGoogleMapsElement;
+    new (): HTMLMyGoogleMapsElement;
+  };
+  interface HTMLElementTagNameMap {
+    "my-google-maps": HTMLMyGoogleMapsElement;
+  }
+  interface ElementTagNameMap {
+    "my-google-maps": HTMLMyGoogleMapsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "my-google-maps": JSXElements.MyGoogleMapsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyGoogleMapsAttributes extends HTMLAttributes {
+      apiKey?: string;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }

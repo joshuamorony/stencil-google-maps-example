@@ -15,14 +15,20 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
+    "@capacitor/cli": "^1.0.0-alpha.20",
+    "@capacitor/core": "^1.0.0-alpha.20",
     "@stencil/core": "^0.6.1",
-    "@stencil/router": "latest"
+    "@stencil/router": "latest",
+    "tslib": "^1.9.0"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
+    "@types/googlemaps": "^3.30.8",
     "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "install": "^0.10.4",
+    "jest": "^21.2.1",
+    "npm": "^5.7.1"
   },
   "repository": {
     "type": "git",
